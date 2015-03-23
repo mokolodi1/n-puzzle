@@ -1,0 +1,11 @@
+big stuff:
+- write puzzle_parser (Tanguy)
+- write solve (Teo)
+- write manhattan
+
+not so big stuff:
+- add other heuristic functions
+
+- small things
+put possible heuristics in main file help
+add other heuristics to parse_heuristics (main.c)
