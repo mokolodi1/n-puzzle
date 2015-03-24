@@ -6,6 +6,20 @@ big stuff:
 not so big stuff:
 - add other heuristic functions
 
-- small things
-put possible heuristics in main file help
-add other heuristics to parse_heuristics (main.c)
+small things
+- put possible heuristics in main file help
+- add other heuristics to parse_heuristics (main.c)
+- check to see if auteur file is spelled correctly
+- do we have a better name for data (the t_ushort*)?
+
+map end cases
+- multiple lines of comments throughout
+- comments with spaces before them at the end of the line
+- no \n at the end
+- missing a line of data
+- missing a column of data
+- size is different from that stated at beginning
+- line is broken into two lines (thing that broke your count_islands)
+
+thoughts
+- if we can't handle up to 16 by 16, change t_ushort to t_ubyte

@@ -21,6 +21,19 @@
 typedef unsigned short					t_ushort;
 typedef int (*f)(int size, t_ushort *data) t_heuristic;
 
+/*
+** g() = best_known_path_cost
+** f() = heuristic_cost_estimate + best_known_path_cost
+*/
+
+typedef struct		s_node
+{
+	t_ushort		*data;
+	int				best_known_path_cost;
+	int				heuristic_cost_estimate;
+	struct s_node	*came_from;
+}					t_node;
+
 void				puzzle_parser(char *filename, int *size, t_ushort **data);
 void				solve(int size, t_ushort *input_data
 							, t_heuristic heuristic);
