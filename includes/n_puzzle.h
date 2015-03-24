@@ -6,7 +6,7 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/23 10:00:43 by tfleming          #+#    #+#             */
-/*   Updated: 2015/03/23 11:13:27 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/03/24 15:17:31 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 
 typedef unsigned short					t_ushort;
 typedef int (*f)(int size, t_ushort *data) t_heuristic;
+
+typedef struct		s_tile
+{
+	unsigned char	x;
+	unsigned char	y;
+}					t_tile;
 
 /*
 ** g() = best_known_path_cost
