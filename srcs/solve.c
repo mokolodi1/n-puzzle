@@ -6,7 +6,7 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/23 10:32:11 by tfleming          #+#    #+#             */
-/*   Updated: 2015/03/23 11:08:16 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/03/24 22:52:52 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,9 @@
 ** t_rb_tree different from t_rb_node
 */
 
-static void			generate_neighbors(int *number_of_neighbors
-										, t_node *neighbors)
-{
-	// stuff
-}
-
 static void			inside_bit()
 {
-	t_node			neighbors[4];
+	t_node			(*neighbors)[4];
 	int				number_of_neighbors;
 	int				i;
 
@@ -58,18 +52,32 @@ static void			inside_bit()
 	i = 0;
 	while (i < number_of_neighbors)
 	{
-		
+		if (rb_contains_p(neighbor))
+			free_node(neighbor);
+		else
+		{
+			// set came_back to current
+			// set g_score to came_from->g_score + 1
+			// set f_score to g_score + heuristic
+			// if neighbor not in openset
+				// add neighbor to openset if not already in openset
+		}
 	}
+}
+
+static void			setup_solver(t_solver *solver)
+{
+	solver->already_evaluated_heuristic.compare = &
 }
 
 void				solve(int size, t_ushort *input_data, t_heuristic heuristic)
 {
-	t_rb_tree		*already_evaluated;
-	t_rb_tree		*to_be_evaluatd;
-	t_rb_tree		*came_from;
+	t_solver		solver;
 	t_node			*current;
 	t_ushort		*solution;
 
+	setup_solver(&solver);
+	// add first stuff
 	while (!is_empty(to_be_evaluated))
 	{
 		current = remove_lowest_fscore(to_be_evaluated);

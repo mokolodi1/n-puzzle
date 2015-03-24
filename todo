@@ -23,3 +23,6 @@ map end cases
 
 thoughts
 - if we can't handle up to 16 by 16, change t_ushort to t_ubyte
+
+talk about soon
+- manhattan file (when we'd have to call it)
