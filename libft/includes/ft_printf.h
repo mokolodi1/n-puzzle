@@ -6,7 +6,7 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/26 16:36:32 by tfleming          #+#    #+#             */
-/*   Updated: 2015/01/31 15:01:15 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/03/26 16:51:35 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ typedef struct			s_conversion
 	t_flags				flags;
 	unsigned int		width;
 	unsigned int		precision;
-	t_bool				precision_set;
+	int					precision_set;
 	t_length			length;
 	t_specifier			specifier;
 }						t_conversion;

@@ -6,7 +6,7 @@
 #    By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/04 17:52:57 by tfleming          #+#    #+#              #
-#    Updated: 2015/03/19 16:54:00 by tfleming         ###   ########.fr        #
+#    Updated: 2015/03/26 16:50:28 by tfleming         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -17,6 +17,8 @@ FLAGS =				-Wall -Werror -Wextra -g -O0
 
 INCLUDES =			./includes
 FT_SRC_DIR =		./libft
+FT_LIST_DIR =		./ft_list
+FT_PQ_DIR =			./ft_priority_queue
 GET_NEXT_LINE_DIR =	./get-next-line
 PRINTF_SRC_DIR =	./printf
 
@@ -111,7 +113,15 @@ FT_COMPILED =		ft_islower.o \
 					ft_array_expand.o \
 					ft_array_reverse.o \
 					ft_quicksort.o \
-					ft_list_create_elem.o \
+					ft_min.o \
+					ft_min_umax.o \
+					ft_max.o \
+					ft_intswp.o \
+					ft_ptrswp.o \
+					ft_ptrequ.o \
+					ft_assert.o
+
+FT_LIST =			ft_list_create_elem.o \
 					ft_list_at.o \
 					ft_list_clear.o \
 					ft_list_find.o \
@@ -126,18 +136,13 @@ FT_COMPILED =		ft_islower.o \
 					ft_list_size.o \
 					ft_list_sort.o \
 					ft_list_foreach.o \
-					ft_list_foreach_if.o \
-					ft_min.o \
-					ft_min_umax.o \
-					ft_max.o \
-					ft_intswp.o \
-					ft_ptrswp.o \
-					ft_ptrequ.o \
-					ft_pq_create_new.o \
+					ft_list_foreach_if.o
+
+FT_PQ =				ft_pq_create_new.o \
 					ft_pq_add.o \
 					ft_pq_remove.o \
 					ft_pq_peek.o \
-					ft_pq_resize_array.o \
+					ft_pq_resize_array.o
 
 GET_NEXT_LINE_COMPILED = \
 					get_next_line.o
@@ -169,7 +174,11 @@ PRINTF_COMPILED =	ft_printf.o \
 					add_final_padding.o \
 					add_precision_padding.o
 
-COMPILED =			$(FT_COMPILED) $(PRINTF_COMPILED) $(GET_NEXT_LINE_COMPILED)
+COMPILED =			$(FT_COMPILED) \
+					$(FT_LIST_COMPILED) \
+					$(FT_PQ_COMPILED) \
+					$(PRINTF_COMPILED) \
+					$(GET_NEXT_LINE_COMPILED)
 
 all: $(NAME)
 
@@ -179,6 +188,12 @@ $(NAME): $(COMPILED)
 	@echo "made" $(NAME)
 
 $(FT_COMPILED): %.o: $(FT_SRC_DIR)/%.c
+	@$(CC) -c $(FLAGS) -I $(INCLUDES) $< -o $@
+
+$(FT_LIST_COMPILED): %.o: $(FT_LIST_DIR)/%.c
+	@$(CC) -c $(FLAGS) -I $(INCLUDES) $< -o $@
+
+$(FT_PQ_COMPILED): %.o: $(FT_PQ_DIR)/%.c
 	@$(CC) -c $(FLAGS) -I $(INCLUDES) $< -o $@
 
 $(PRINTF_COMPILED): %.o: $(PRINTF_SRC_DIR)/%.c

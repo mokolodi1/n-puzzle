@@ -6,7 +6,7 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 12:34:27 by tfleming          #+#    #+#             */
-/*   Updated: 2015/03/17 14:12:18 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/03/26 16:51:04 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdarg.h>
-
-typedef char		t_bool;
 
 /*
 ** memory
@@ -164,57 +162,6 @@ void				ft_ptrswp(void **first, void **second);
 void				ft_intswp(int *first, int *second);
 int					ft_ptrequ(const void *first, const void *second);
 
-/*
-** linked lists
-*/
-
-typedef struct		s_list
-{
-	struct s_list		*next;
-	void				*data;
-}					t_list;
-
-t_list				*ft_list_create_elem(void *data);
-t_list				*ft_list_at(t_list *begin_list, unsigned int nbr);
-void				ft_list_clear(t_list **begin_list);
-t_list				*ft_list_find(t_list *begin_list,
-								void *data_ref,
-								int (*cmp)());
-t_list				*ft_list_find_end(t_list *list);
-void				ft_list_foreach(t_list *list, void (*function)(void *));
-void				ft_list_foreach_if(t_list *list
-								, void (*function)(void *)
-								, void *data_ref
-								, int (*cmp)());
-t_list				*ft_list_last(t_list *begin_list);
-void				ft_list_push_back(t_list **begin_list, void *data);
-void				ft_list_push_front(t_list **begin_list, void *data);
-t_list				*ft_list_push_params(int ac, char **av);
-void				ft_list_remove_if(t_list **begin_list, void *data_ref
-									, int (*cmp)());
-void				ft_list_reverse(t_list **begin_list);
-size_t				ft_list_size(t_list *begin_list);
-void				ft_list_sort(t_list **first, int (*compare)(void*, void*));
-
-/*
-** t_priority_queue
-** http://pages.cs.wisc.edu/~vernon/cs367/notes/11.PRIORITY-Q.html
-** sorting: bigger is better
-** data array starts at 1 (data[0] is always NULL)
-*/
-
-typedef struct		s_priority_queue
-{
-	void			**data;
-	size_t			data_count;
-	size_t			element_count;
-	int				(*compare)(void*, void*);
-}					t_priority_queue;
-
-t_priority_queue	*ft_pq_create_new(int (*compare)(void*, void*));
-void				ft_pq_add(t_priority_queue *priority_queue, void *element);
-void				*ft_pq_remove(t_priority_queue *priority_queue);
-void				ft_pq_resize_array(t_priority_queue *priority_queue);
-void				*ft_pq_peek(t_priority_queue *priority_queue);
+void				ft_assert(int assertion, char *if_error);
 
 #endif
