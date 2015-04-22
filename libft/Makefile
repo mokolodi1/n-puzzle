@@ -6,7 +6,7 @@
 #    By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/04 17:52:57 by tfleming          #+#    #+#              #
-#    Updated: 2015/03/26 16:50:28 by tfleming         ###   ########.fr        #
+#    Updated: 2015/04/22 14:08:06 by tfleming         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -121,7 +121,7 @@ FT_COMPILED =		ft_islower.o \
 					ft_ptrequ.o \
 					ft_assert.o
 
-FT_LIST =			ft_list_create_elem.o \
+FT_LIST_COMPILED =	ft_list_create_elem.o \
 					ft_list_at.o \
 					ft_list_clear.o \
 					ft_list_find.o \
@@ -138,14 +138,15 @@ FT_LIST =			ft_list_create_elem.o \
 					ft_list_foreach.o \
 					ft_list_foreach_if.o
 
-FT_PQ =				ft_pq_create_new.o \
+FT_PQ_COMPILED =	ft_pq_create_new.o \
 					ft_pq_add.o \
 					ft_pq_remove.o \
 					ft_pq_peek.o \
 					ft_pq_resize_array.o
 
 GET_NEXT_LINE_COMPILED = \
-					get_next_line.o
+					get_next_line.o \
+					ft_read_file.o
 
 PRINTF_COMPILED =	ft_printf.o \
 					handle_format.o \

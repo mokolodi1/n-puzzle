@@ -6,7 +6,7 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/11 14:24:33 by tfleming          #+#    #+#             */
-/*   Updated: 2015/01/15 15:18:42 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 14:07:56 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
 # include "libft.h"
+# include "ft_list.h"
 
 # define BUF_SIZE		1
 # define SPILL_MULT		2
@@ -31,5 +33,6 @@ typedef struct		s_stock
 }					t_stock;
 
 int					get_next_line(int fd, char **line);
+int					ft_read_file(char *filename, t_list **lines_destination);
 
 #endif

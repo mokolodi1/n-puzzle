@@ -6,7 +6,7 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/26 15:38:35 by tfleming          #+#    #+#             */
-/*   Updated: 2015/03/26 16:47:20 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:58:20 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@
 ** sorting: bigger is better
 ** data array starts at 1 (data[0] is always NULL)
 */
+
+# include <stdlib.h>
+# include "libft.h"
 
 typedef struct		s_priority_queue
 {

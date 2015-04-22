@@ -6,11 +6,11 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/10 21:19:58 by tfleming          #+#    #+#             */
-/*   Updated: 2014/09/10 21:44:37 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:55:48 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_list.h"
 
 t_list			*ft_list_find(t_list *begin_list, void *data_ref, int (*cmp)())
 {

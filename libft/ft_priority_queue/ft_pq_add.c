@@ -6,11 +6,11 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/12 17:09:42 by tfleming          #+#    #+#             */
-/*   Updated: 2015/02/14 23:13:05 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:57:48 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_priority_queue.h"
 
 void				ft_pq_add(t_priority_queue *priority_queue, void *element)
 {

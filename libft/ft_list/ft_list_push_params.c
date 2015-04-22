@@ -6,11 +6,11 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/10 16:41:28 by tfleming          #+#    #+#             */
-/*   Updated: 2014/09/10 20:56:02 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:55:48 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_list.h"
 
 t_list		*ft_list_push_params(int ac, char **av)
 {

@@ -6,11 +6,11 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/12 17:08:25 by tfleming          #+#    #+#             */
-/*   Updated: 2015/03/11 17:31:23 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:57:48 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_priority_queue.h"
 
 static void			setup(t_priority_queue *priority_queue, void ***data
 									, size_t *current, void **to_return)

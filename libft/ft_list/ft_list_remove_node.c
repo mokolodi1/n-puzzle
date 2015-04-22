@@ -6,7 +6,7 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/26 16:40:41 by tfleming          #+#    #+#             */
-/*   Updated: 2015/01/26 17:06:14 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:55:48 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 ** NOTE: need to do free(old_one) in line 34 (insert)
 */
 
-#include "libft.h"
+#include "ft_list.h"
 
 void					ft_list_remove_node(t_list **original
 											, t_list *to_remove

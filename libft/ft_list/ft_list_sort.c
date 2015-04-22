@@ -6,11 +6,11 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/05 18:16:13 by tfleming          #+#    #+#             */
-/*   Updated: 2014/12/16 19:20:37 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:55:21 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_list.h"
 
 void			ft_list_sort(t_list **first, int (*compare)(void*, void*))
 {

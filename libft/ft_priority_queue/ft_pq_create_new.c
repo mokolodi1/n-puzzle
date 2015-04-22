@@ -6,11 +6,11 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/12 17:08:50 by tfleming          #+#    #+#             */
-/*   Updated: 2015/02/14 19:28:21 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:57:48 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_priority_queue.h"
 
 t_priority_queue		*ft_pq_create_new(int (*compare)(void*, void*))
 {

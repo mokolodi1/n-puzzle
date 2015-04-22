@@ -6,7 +6,7 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/23 10:00:43 by tfleming          #+#    #+#             */
-/*   Updated: 2015/03/24 22:54:31 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 14:10:00 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 ** data[row * size + column]
 */
 
-typedef unsigned short					t_ushort;
-typedef int (*f)(int size, t_ushort *data) t_heuristic;
+typedef int (*f)(int size, t_tile *data) t_heuristic;
 
 typedef struct		s_tile
 {
@@ -40,30 +39,6 @@ typedef struct		s_node
 	int				heuristic_cost_estimate;
 	struct s_node	*came_from;
 }					t_node;
-
-/*
-** will move redblack typedefs and functions to libft
-*/
-
-typedef struct		s_redblack_node
-{
-	void					*data;
-	int						is_red;
-	struct s_redblack_node	*left;
-	struct s_redblack_node	*right;
-	struct s_redblack_node	*parent;
-}					t_redblack_node;
-
-typedef struct		s_redblack_tree
-{
-	int				(*compare)(void*, void*);
-	void			free_inside(void*, void*);
-	t_redblack_node	root;
-	t_redblack_node	nil;
-}					t_redblack_tree;
-
-
-
 
 typedef struct		s_solver
 {

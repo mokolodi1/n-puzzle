@@ -6,11 +6,11 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/09/10 17:15:04 by tfleming          #+#    #+#             */
-/*   Updated: 2014/09/10 20:56:44 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:55:48 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_list.h"
 
 static void		ft_destroy(t_list *list)
 {
@@ -21,6 +21,9 @@ static void		ft_destroy(t_list *list)
 
 void			ft_list_clear(t_list **begin_list)
 {
-	ft_destroy(*begin_list);
-	*begin_list = NULL;
+	if (begin_list && *begin_list)
+	{
+		ft_destroy(*begin_list);
+		*begin_list = NULL;
+	}
 }

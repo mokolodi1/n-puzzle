@@ -6,12 +6,15 @@
 /*   By: tfleming <tfleming@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/26 15:34:47 by tfleming          #+#    #+#             */
-/*   Updated: 2015/03/26 15:35:20 by tfleming         ###   ########.fr       */
+/*   Updated: 2015/04/22 13:56:35 by tfleming         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIST_H
 # define FT_LIST_H
+
+# include <stdlib.h>
+# include "libft.h"
 
 typedef struct		s_list
 {
